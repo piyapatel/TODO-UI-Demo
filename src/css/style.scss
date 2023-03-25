@@ -1,0 +1,183 @@
+$blue-bg: #2c7bed;
+$white-bg:#fff;
+$gray-color:#ddd;
+$black-color:#000;
+$light-blue:#66b8f2;
+$light-gray:rgb(0 0 0 / 40%);
+$dark-gray:rgb(0 0 0 / 60%);
+$box-shadow: 1px 1px 9px 1px #0000008c;
+
+body{
+    margin: 0;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.App{
+    background:$blue-bg;  
+    padding: 20px;
+    .wrapper{
+        background: $white-bg;
+        box-shadow: $box-shadow;
+        border-radius: 20px;
+        height: calc(100vh - 40px);
+        .admin-content{
+            border-right: 1px solid $gray-color;
+            height: 100%;
+            .admin-panel {
+                padding: 12px;
+                border-bottom: 1px solid $gray-color;
+                .admin-images {
+                    img {
+                         width: 100px;
+                    }
+                }
+                .list-ul{
+                    ul{
+                        padding: 0;
+                        list-style: none;
+                        li{
+                            text-align: center;
+                            padding: 0 12px;
+                            h5{
+                                font-weight: bold;
+                                font-size: 20px;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+            .category-panel{
+                border-bottom: 1px solid $gray-color;
+                h2{
+                    font-weight: 600;
+                    font-size: 25px;
+                }
+                .list-li {
+                    position: relative;
+                    padding-left: 40px;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 30px;
+                        height: 6px;
+                        background: #66b8f2;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                    h4{
+                        font-weight: normal;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        .right-content{
+            position: relative;
+            padding-bottom: 90px;
+            height: 100%;
+            .top-header{
+                padding: 22px;
+                border-bottom: 1px solid $gray-color;
+                .nav{
+                    ul{
+                        li{
+                            a{
+                                color: $light-gray;
+                                padding: 0 30px;
+                                font-size: 19px;
+                                font-weight: 600;
+                                &:hover{
+                                    color: $black-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .center-content{
+                padding: 22px;
+                .tabbing-content{
+                    h4{
+                        position: relative;
+                        padding-left: 20px;
+                        color: $black-color;
+                        &::before{
+                            content: '';
+                            width: 6px;
+                            height: 100%;
+                            background: $light-blue;
+                            position: absolute;
+                            left: 0;
+                        }
+                    }
+                    
+                    ul{
+                        li{
+                            a{
+                                color: $light-gray;
+                                padding: 0 15px;
+                                font-size: 16px;
+                                &:hover{
+                                    color: $black-color;
+                                }
+                            }
+                        }
+                    }
+                }
+                .tasklist-content{
+                    margin-top: 30px;
+                    .tasklist-ul{
+                        margin-bottom: 20px;
+                        .task-icons {
+                            margin-right: 5px;
+                            img{
+                                width: 30px;
+                                margin-right: 10px;
+                            }
+                        }
+                        .task-info{
+                            h3{
+                                font-size: 20px;
+                                color:$dark-gray;
+                                margin-bottom: 5px;
+                            }
+                            p{
+                                color: $light-gray;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+                .task-btn {
+                    position: absolute;
+                    bottom: 20px;
+                    text-align: center;
+                    left: 0;
+                    right: 0;
+                    button{
+                        background:$blue-bg;
+                        background: linear-gradient( $blue-bg 35%, $light-blue 100%);
+                        color: $white-bg;
+                        border: 0;                      
+                        padding: 7px 50px;
+                        border-radius: 7px;
+                        font-size: 25px;
+                        transition: all .5s ease;
+                        &:hover{
+                            background: linear-gradient($light-blue 35%, $blue-bg 100%);
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}
